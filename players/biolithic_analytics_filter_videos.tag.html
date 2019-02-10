@@ -1,5 +1,5 @@
 <biolithic_analytics_filter_videos>
-<h1>Streambaes of One Shot Gurl
+<h1>Stream Co-Players of One Shot Gurl
 </h1>
 <div class="ui search">
   <div class="ui fluid icon input">
@@ -9,17 +9,12 @@
 </div>
 <script>
 
-this.videos = window.biolithicBaes;
-this.avgs = [];
-this.viewAvg = "";
-this.likeAvg = "";
-this.dislikeAvg = "";
-this.commentAvg = "";
+this.videos = window.biolithicPlayers;
 this.on('mount', function(){
   });
 
 this.on('update', function() {
-  this.videos = window.biolithicBaes;
+  this.videos = window.biolithicPlayers;
   }.bind(this));
 
 this.on('updated', function() {
@@ -42,18 +37,17 @@ var self = this;
         var arr = [];
         var videoslength = self.videos.length;
         for (z = 0; z < videoslength; z++) {
-          var video = self.videos[z].name.toLowerCase();
-          var video2 = self.videos[z].game.toLowerCase();
+          var video = self.videos[z].names.toLowerCase();
           if ((video.indexOf(keyword) > -1) || (video2.indexOf(keyword) > -1)) {
             arr.push(self.videos[z]);
           }
         }
-        window.biolithicBaes = arr;
+        window.biolithicPlayers = arr;
         riot.update();
         }
         else {
           if (self.original) {
-            window.biolithicBaes = self.original;
+            window.biolithicPlayers = self.original;
             riot.update();
           }
         }

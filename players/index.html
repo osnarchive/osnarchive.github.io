@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="google" content="notranslate">
 <meta name="robots" content="noindex, nofollow">
-<title>Streambaes of OSG - OSN Archive</title>
+<title>Stream Co-Players of OSG - OSN Archive</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="HandheldFriendly" content="True">
@@ -51,12 +51,12 @@
 
 <!-- titles -->
 <meta name="author" content="Andy Martha">
-<meta name="apple-mobile-web-app-title" content="Streambaes of OSG - OSN Archive">
-<meta name="application-name" content="Streambaes of OSG - OSN Archive">
-<meta property="og:title" content="Streambaes of OSG - OSN Archive" />
+<meta name="apple-mobile-web-app-title" content="Stream Co-Players of OSGOSN Archive">
+<meta name="application-name" content="Stream Co-Players of OSGOSN Archive">
+<meta property="og:title" content="Stream Co-Players of OSGOSN Archive" />
 <meta property="og:image" content="apple-touch-icon-114x114.png" />
-<meta property="og:description" content="Streambaes of OSG - OSN Archive" />
-<meta name="description" content="Streambaes of OSG - OSN Archive">
+<meta property="og:description" content="Stream Co-Players of OSGOSN Archive" />
+<meta name="description" content="Stream Co-Players of OSGOSN Archive">
 <link rel="stylesheet" href="semantic217.min.css">
 <style>
 ul {
@@ -141,24 +141,21 @@ color: white;
 <script src="js/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
-console.log("hello4 ");
-window.biolithicBaes = "";
+window.biolithicPlayers = "";
 
-var jqxhr = $.ajax({url: "https://osnarchive.github.io/streambae/bae.json", cache: false, dataType: "json"})
+var jqxhr = $.ajax({url: "https://osnarchive.github.io/players/players.json", cache: false, dataType: "json"})
   .done(function(data) {
 
-var baes = [];
-var thelength = data.baes.length;
+var players = [];
+var thelength = data.players.length;
 for (var z = 0; z < thelength; z++) {
-  var bae = {};
-  bae.amount = data.baes[z].amount;
-  bae.date = data.baes[z].date;
-  bae.game = data.baes[z].game;
-  bae.id = data.baes[z].id;
-  bae.name = data.baes[z].name;
-  baes.push(bae);
+  var player = {};
+  player.date = data.players[z].date;
+  player.id = data.players[z].id;
+  player.names = data.players[z].names;
+  players.push(player);
 }
-window.biolithicBaes = baes;
+window.biolithicPlayers = players;
 riot.update();
 
   })

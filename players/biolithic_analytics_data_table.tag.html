@@ -4,40 +4,29 @@
             <table class="ui very basic table videos">
               <thead>
                 <tr>
-                  <th data-sort="game" onclick={ handler }>Stream<span class="darr"> &darr;</span></th>
+                  <th onclick={ handler }>Stream<span class="darr"> &darr;</span></th>
                   <th data-sort="date" onclick={ handler }>Date<span class="darr"> &darr;</span></th>
-                  <th data-sort="name" onclick={ handler }>Name<span class="darr"> &darr;</span></th>
-                  <!-- <th data-sort="amount" onclick={ handler }>Amount<span class="darr"> &darr;</span></th> -->
+                  <th data-sort="names" onclick={ handler }>Names<span class="darr"> &darr;</span></th>
                 </tr>
               </thead>
               <tbody>
-                <tr each={bae in this.baes} class={active: baeId == bae.nid, initialstate: !baeId}>
-                  <td><a href="https://www.youtube.com/watch?v={bae.id}" title="{bae.game}" target="_blank">{bae.game}</a></td>
-                  <td>{bae.date}</td>
-                  <td>{bae.name}</td>
-                  <!-- <td>{bae.amount}</td> -->
+                <tr each={player in this.players} class={active: playerId == player.nid, initialstate: !playerId}>
+                  <td><a href="https://www.youtube.com/watch?v={player.id}" title="{player.id}" target="_blank"> {player.id} </a></td>
+                  <td>{player.date}</td>
+                  <td>{player.names}</td>
+                  <!-- <td>{player.amount}</td> -->
                 </tr>
                 </tbody>
                 </table>
 
           </div>
 <script>
-this.baes = [];
-this.avgs = [];
-this.viewAvg = "";
-this.likeAvg = "";
-this.dislikeAvg = "";
-this.commentAvg = "";
+this.players = [];
 this.on('mount', function(){
   });
 
 this.on('update', function() {
-  this.baes = window.biolithicBaes;
-  this.avgs = window.biolithicBaesAvgs;
-  this.viewAvg = window.biolithicBaesviewAvg;
-  this.likeAvg = window.biolithicBaeslikeAvg;
-  this.dislikeAvg = window.biolithicBaesdislikeAvg;
-  this.commentAvg = window.biolithicBaescommentAvg;
+  this.players = window.biolithicPlayers;
   }.bind(this));
 
 this.on('updated', function() {
@@ -46,12 +35,11 @@ this.on('updated', function() {
 var self = this;
   handler (e) {
     var clicked_element = e.target; $("th").removeClass("h"); $(clicked_element).addClass("h");
-    var mybaes = self.baes;
-    var myavgs = self.avgs;
+    var myplayers = self.players;
 
     switch (e.target.dataset.sort) {
     case "game":
-        mybaes.sort(function(a, b) {
+        myplayers.sort(function(a, b) {
         var nameA=a.game.toLowerCase();
         var nameB=b.game.toLowerCase();
         if (nameA < nameB)
@@ -60,63 +48,27 @@ var self = this;
         return 1
         return 0
         });
-        window.biolithicBaes = mybaes;
+        window.biolithicPlayers = myplayers;
         self.update();
         break;
     case "date":
-        mybaes.sort(function(a, b) {
+        myplayers.sort(function(a, b) {
         return parseFloat(b.date) - parseFloat(a.date);
         });
-        window.biolithicBaes = mybaes;
+        window.biolithicPlayers = myplayers;
         self.update();
         break;
-    case "name":
-        mybaes.sort(function(a, b) {
-        var nameA=a.name.toLowerCase();
-        var nameB=b.name.toLowerCase();
+    case "names":
+        myplayers.sort(function(a, b) {
+        var nameA=a.names.toLowerCase();
+        var nameB=b.names.toLowerCase();
         if (nameA < nameB)
         return -1
         if (nameA > nameB)
         return 1
         return 0
         });
-        window.biolithicBaes = mybaes;
-        self.update();
-        break;
-    case "amount":
-        mybaes.sort(function(a, b) {
-        return parseFloat(b.amount) - parseFloat(a.amount);
-        });
-        window.biolithicBaes = mybaes;
-        self.update();
-        break;
-
-      case "viewAvg":
-        myavgs.sort(function(a, b) {
-        return parseFloat(b.viewAvg) - parseFloat(a.viewAvg);
-        });
-        window.biolithicBaesAvgs = myavgs;
-        self.update();
-        break;
-      case "likeAvg":
-        myavgs.sort(function(a, b) {
-        return parseFloat(b.likeAvg) - parseFloat(a.likeAvg);
-        });
-        window.biolithicBaesAvgs = myavgs;
-        self.update();
-        break;
-      case "dislikeAvg":
-        myavgs.sort(function(a, b) {
-        return parseFloat(b.dislikeAvg) - parseFloat(a.dislikeAvg);
-        });
-        window.biolithicBaesAvgs = myavgs;
-        self.update();
-        break;
-      case "commentAvg":
-        myavgs.sort(function(a, b) {
-        return parseFloat(b.commentAvg) - parseFloat(a.commentAvg);
-        });
-        window.biolithicBaesAvgs = myavgs;
+        window.biolithicPlayers = myplayers;
         self.update();
         break;
     }
