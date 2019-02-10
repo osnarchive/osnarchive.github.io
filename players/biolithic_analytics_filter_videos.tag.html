@@ -38,7 +38,7 @@ var self = this;
         var videoslength = self.videos.length;
         for (z = 0; z < videoslength; z++) {
           var video = self.videos[z].names.toLowerCase();
-          if ((video.indexOf(keyword) > -1) || (video2.indexOf(keyword) > -1)) {
+          if (video.indexOf(keyword) > -1) {
             arr.push(self.videos[z]);
           }
         }
