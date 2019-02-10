@@ -1,0 +1,27 @@
+.image.avatar {
+background-image: url(images/profile.jpg);
+background-size: 100px 100px;
+background-repeat: no-repeat;
+width: 100px;
+height: 100px;
+}
+
+#one .img-responsive {
+	background-image: url(images/likespike.jpg);
+background-size: 570px 321px;
+background-repeat: no-repeat;
+width: 570px;
+height: 321px;
+}
+
+#ten .img-responsive {
+	background-image: url(images/screen1.jpg);
+background-size: 636px 538px;
+background-repeat: no-repeat;
+width: 636px;
+height: 538px;
+}
+
+#ten .img-responsive.two {
+	background-image: url(images/screen2.jpg);
+}

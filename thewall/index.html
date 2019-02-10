@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="google" content="notranslate">
+<meta name="robots" content="noindex, nofollow">
+<title>OSN Archive</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta http-equiv="cleartype" content="on">
+
+<!-- colors -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000">
+<meta name="msapplication-TileColor" content="#000">
+
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+
+<link rel="icon" type="image/png" href="android-chrome-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="android-chrome-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="android-chrome-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="android-chrome-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="android-chrome-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192">
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-180x180.png">
+<link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000">
+
+<meta name="msapplication-TileImage" content="mstile-70x70.png">
+<meta name="msapplication-TileImage" content="mstile-144x144.png">
+<meta name="msapplication-TileImage" content="mstile-150x150.png">
+<meta name="msapplication-TileImage" content="mstile-310x150.png">
+<meta name="msapplication-TileImage" content="mstile-310x310.png">
+
+<!-- titles -->
+<meta name="author" content="Andy Martha">
+<meta name="apple-mobile-web-app-title" content="OSN Archive">
+<meta name="application-name" content="OSN Archive">
+<meta property="og:title" content="OSN Archive" />
+<meta property="og:image" content="apple-touch-icon-114x114.png" />
+<meta property="og:description" content="OSN Archive" />
+<meta name="description" content="OSN Archive">
+<script src="assets/js/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<style>
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+body, input, select, textarea {
+    color: #a2a2a2;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.75em;
+}
+body {
+  background: #eee;
+  width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #787878;
+    font-weight: 400;
+    line-height: 1em;
+    margin: 0 0 1em 0;
+}
+@media screen and (max-width: 736px) {
+h2 {
+    font-size: 1.2em;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+}
+@media screen and (max-width: 736px) {
+h3 {
+    font-size: 1em;
+}
+h3 {
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+}
+p {
+    margin: 0 0 2em 0;
+}
+hr {
+    border: 0;
+    border-bottom: solid 2px #efefef;
+    margin: 2em 0;
+}
+ol {
+    list-style: decimal;
+    margin: 0 0 2em 0;
+    padding-left: 1.25em;
+}
+ol li {
+    padding-left: 0.25em;
+}
+.swiper-container {
+    height: 560px;
+    width: auto;
+    margin-left: 2px;
+}
+aside {
+    position: absolute;
+    bottom: 0px;
+    color: #000;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.swiper-slide {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #FFCB05;
+}
+.primetimepic {
+  width: 100%;
+  height: auto;
+}
+a, h3 a, a:hover, a:active, a:focus {
+  color: #ce0051;
+  text-decoration: none;
+}
+.innertext {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+</style>
+</head>
+<body id="top">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<span style="color: #00255D; font-weight: 800; padding-left: 10px;">Here is some awesome fan art<br>
+by real Snipers of One Shot Nation.<br>
+</span></div>
+<div class="swiper-slide" style="background-image: url(art/17isawesome.jpg);"><aside>By 17_is_awesome!!!!</aside></div>
+<div class="swiper-slide" style="background-image: url(art/aimxx.png);"><aside>By Aimxx</aside></div>
+<div class="swiper-slide" style="background-image: url(art/aluita.png);"><aside>By Aluita</aside></div>
+<div class="swiper-slide" style="background-image: url(art/amber.png);"><aside>By Amber</aside></div>
+<div class="swiper-slide" style="background-image: url(art/arnold.png);"><aside>By Arnold</aside></div>
+<div class="swiper-slide" style="background-image: url(art/arodiatv.jpg);"><aside>By Arodiatv</aside></div>
+<div class="swiper-slide" style="background-image: url(art/asa.png);"><aside>By Asa</aside></div>
+<div class="swiper-slide" style="background-image: url(art/ashley.png);"><aside>By Ashley</aside></div>
+<div class="swiper-slide" style="background-image: url(art/biolithic.png);"><aside>By Biolithic</aside></div>
+<div class="swiper-slide" style="background-image: url(art/blazewolff.jpg);"><aside>By Blazewolff</aside></div>
+<div class="swiper-slide" style="background-image: url(art/bo.png);"><aside>By Bo</aside></div>
+<div class="swiper-slide" style="background-image: url(art/braden.png);"><aside>By Braden</aside></div>
+<div class="swiper-slide" style="background-image: url(art/C4SaberKing.jpg);"><aside>By C4SaberKing</aside></div>
+<div class="swiper-slide" style="background-image: url(art/caitlyn.png);"><aside>By Caitlyn</aside></div>
+<div class="swiper-slide" style="background-image: url(art/cameron.png);"><aside>By Cameron</aside></div>
+<div class="swiper-slide" style="background-image: url(art/chase.png);"><aside>By Chase</aside></div>
+<div class="swiper-slide" style="background-image: url(art/christopher.png);"><aside>By Christopher</aside></div>
+<div class="swiper-slide" style="background-image: url(art/classicleaf.png);"><aside>By Classicleaf</aside></div>
+<div class="swiper-slide" style="background-image: url(art/coolcobra.png);"><aside>By Coolcobra</aside></div>
+<div class="swiper-slide" style="background-image: url(art/CormactheSniper.jpg);"><aside>By CormactheSniper</aside></div>
+<div class="swiper-slide" style="background-image: url(art/cormick.png);"><aside>By Cormick</aside></div>
+<div class="swiper-slide" style="background-image: url(art/creeperqueen.jpg);"><aside>By Creeperqueen</aside></div>
+<div class="swiper-slide" style="background-image: url(art/dan.png);"><aside>By Dan</aside></div>
+<div class="swiper-slide" style="background-image: url(art/davis.png);"><aside>By Davis</aside></div>
+<div class="swiper-slide" style="background-image: url(art/dawson.png);"><aside>By Dawson</aside></div>
+<div class="swiper-slide" style="background-image: url(art/defman.png);"><aside>By Defman</aside></div>
+<div class="swiper-slide" style="background-image: url(art/DomTheBomb03.jpg);"><aside>By DomTheBomb03</aside></div>
+<div class="swiper-slide" style="background-image: url(art/dovahkait.jpg);"><aside>By Dovahkait</aside></div>
+<div class="swiper-slide" style="background-image: url(art/dragonrider127.jpg);"><aside>By Dragonrider127</aside></div>
+<div class="swiper-slide" style="background-image: url(art/EditorBoo.jpg);"><aside>By EditorBoo</aside></div>
+<div class="swiper-slide" style="background-image: url(art/elly.png);"><aside>By Elly</aside></div>
+<div class="swiper-slide" style="background-image: url(art/falconman.jpg);"><aside>By FalconMan</aside></div>
+<div class="swiper-slide" style="background-image: url(art/galaxygamer.png);"><aside>By Galaxygamer</aside></div>
+<div class="swiper-slide" style="background-image: url(art/gamerxten.png);"><aside>By Gamerxten</aside></div>
+<div class="swiper-slide" style="background-image: url(art/genuinejess.png);"><aside>By GenuineJess</aside></div>
+<div class="swiper-slide" style="background-image: url(art/glacianman.png);"><aside>By GlacianMan</aside></div>
+<div class="swiper-slide" style="background-image: url(art/hailey.png);"><aside>By Hailey</aside></div>
+<div class="swiper-slide" style="background-image: url(art/heinous_hiccup.jpg);"><aside>By Heinous_Hiccup</aside></div>
+<div class="swiper-slide" style="background-image: url(art/heinous_hiccup2.jpg);"><aside>By Heinous_Hiccup</aside></div>
+<div class="swiper-slide" style="background-image: url(art/highqueenamy.jpg);"><aside>By HighQueenAmy</aside></div>
+<div class="swiper-slide" style="background-image: url(art/huntgames.png);"><aside>By HuntGames</aside></div>
+<div class="swiper-slide" style="background-image: url(art/imperialotaku.jpg);"><aside>By ImperialOtaku</aside></div>
+<div class="swiper-slide" style="background-image: url(art/ian.png);"><aside>By Ian</aside></div>
+<div class="swiper-slide" style="background-image: url(art/insane_builds.jpg);"><aside>By Insane_Builds</aside></div>
+<div class="swiper-slide" style="background-image: url(art/ivan.png);"><aside>By Ivan</aside></div>
+<div class="swiper-slide" style="background-image: url(art/jacko.png);"><aside>By Jacko</aside></div>
+<div class="swiper-slide" style="background-image: url(art/jamesroffey.jpg);"><aside>By James R</aside></div>
+<div class="swiper-slide" style="background-image: url(art/jennasantina.jpg);"><aside>By Jenna S</aside></div>
+<div class="swiper-slide" style="background-image: url(art/justinytgaming.jpg);"><aside>By JustinYTgaming</aside></div>
+<div class="swiper-slide" style="background-image: url(art/kendra.png);"><aside>By Kendra</aside></div>
+<div class="swiper-slide" style="background-image: url(art/kjplays.png);"><aside>By KJplays</aside></div>
+<div class="swiper-slide" style="background-image: url(art/kmusicart.jpg);"><aside>By KMusicArt</aside></div>
+<div class="swiper-slide" style="background-image: url(art/Levilynn96Levi.jpg);"><aside>By Levilynn96Levi</aside></div>
+<div class="swiper-slide" style="background-image: url(art/LivsSunshine.jpg);"><aside>By LivsSunshine</aside></div>
+<div class="swiper-slide" style="background-image: url(art/lucia.png);">l<aside>By Lucia</aside></div>
+<div class="swiper-slide" style="background-image: url(art/luckyfire.jpg);"><aside>By Lucky Fire</aside></div>
+<div class="swiper-slide" style="background-image: url(art/maadsy.jpg);"><aside>By Maadsy</aside></div>
+<div class="swiper-slide" style="background-image: url(art/macry.png);"><aside>By Macry</aside></div>
+<div class="swiper-slide" style="background-image: url(art/manny.png);"><aside>By Manny</aside></div>
+<div class="swiper-slide" style="background-image: url(art/mark_th.jpg);"><aside>By Mark_th</aside></div>
+<div class="swiper-slide" style="background-image: url(art/marlon.png);"><aside>By Marlon</aside></div>
+<div class="swiper-slide" style="background-image: url(art/matthew.png);"><aside>By Matthew</aside></div>
+<div class="swiper-slide" style="background-image: url(art/max.png);"><aside>By Max</aside></div>
+<div class="swiper-slide" style="background-image: url(art/mochibiki.jpg);"><aside>By Mochibiki</aside></div>
+<div class="swiper-slide" style="background-image: url(art/Mutiny_Phoenix.png);"><aside>By Mutiny_Phoenix</aside></div>
+<div class="swiper-slide" style="background-image: url(art/nash.png);"><aside>By Nash</aside></div>
+<div class="swiper-slide" style="background-image: url(art/one_shot_fox_trot.png);"><aside>By One_Shot_Fox_Trot</aside></div>
+<div class="swiper-slide" style="background-image: url(art/pentadeuce.png);"><aside>By Pentadeuce</aside></div>
+<div class="swiper-slide" style="background-image: url(art/pinktorch.png);"><aside>By Pinktorch</aside></div>
+<div class="swiper-slide" style="background-image: url(art/rebellegaming.jpg);"><aside>By RebelleGaming</aside></div>
+<div class="swiper-slide" style="background-image: url(art/richard.png);"><aside>By Richard</aside></div>
+<div class="swiper-slide" style="background-image: url(art/Robsgames.jpg);"><aside>By Robsgames</aside></div>
+<div class="swiper-slide" style="background-image: url(art/Rose.jpg);"><aside>By Rose</aside></div>
+<div class="swiper-slide" style="background-image: url(art/sam.png);"><aside>By Sam</aside></div>
+<div class="swiper-slide" style="background-image: url(art/seth.png);"><aside>By Seth</aside></div>
+<div class="swiper-slide" style="background-image: url(art/shawn.png);"><aside>By Shawn</aside></div>
+<div class="swiper-slide" style="background-image: url(art/ShiraiRyu5.jpg);"><aside>By ShiraiRyu5</aside></div>
+<div class="swiper-slide" style="background-image: url(art/sm.png);"><aside>By SM</aside></div>
+<div class="swiper-slide" style="background-image: url(art/snazzytiger.png);"><aside>By SnazzyTiger</aside></div>
+<div class="swiper-slide" style="background-image: url(art/Sniper1.png);"><aside>By Sniper 1</aside></div>
+<div class="swiper-slide" style="background-image: url(art/Sniper2.png);"><aside>By Sniper 2</aside></div>
+<div class="swiper-slide" style="background-image: url(art/stealthbyrd.png);"><aside>By StealthByrd</aside></div>
+<div class="swiper-slide" style="background-image: url(art/steven.png);"><aside>By Steven</aside></div>
+<div class="swiper-slide" style="background-image: url(art/TheGngsterKing5.jpg);"><aside>By TheGngsterKing5</aside></div>
+<div class="swiper-slide" style="background-image: url(art/TigratoPower.png);"><aside>By TigratoPower</aside></div>
+<div class="swiper-slide" style="background-image: url(art/torrin.png);"><aside>By Torrin</aside></div>
+<div class="swiper-slide" style="background-image: url(art/trillestgamer.jpg);"><aside>By TrillestGamer</aside></div>
+<div class="swiper-slide" style="background-image: url(art/trina.png);"><aside>By Trina</aside></div>
+<div class="swiper-slide" style="background-image: url(art/vexium.png);"><aside>By Vexium</aside></div>
+<div class="swiper-slide" style="background-image: url(art/xChargedCoD.jpg);"><aside>By xChargedCoD</aside></div>
+
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+</div>
+</div>
+
+<div style="color: #fff; background-color: #000;">
+    <h2 style="padding-top: 10px; padding-left: 10px;">Follow One Shot Gurl for more!</h2>
+    <div class="innertext" style="color: #000; background-color: #fff;">
+        <a href="https://twitter.com/one_shot_gurl" target="_blank"><img src="images/twitter.svg" height="50" /></a>
+        <a href="https://instagram.com/one_shot_gurl" target="_blank"><img src="images/instagram.svg" height="50" /></a>
+        @one_shot_gurl
+        <br clear="all" />
+
+        <a href="https://www.patreon.com/ONEshotGURL" target="_blank"><img src="images/patreon.svg" height="50" /></a>
+        <a href="https://goo.gl/gyZFrn" target="_blank"><img src="images/play.svg" height="50" /></a>
+        Support her on her way up!
+        <br clear="all" />
+        <a href="https://discord.gg/0tvwy9qQjEu5i1xd" target="_blank"><img src="images/website.svg" height="50" /></a>Chat with the Snipers on Discord!
+    </div>
+</div>
+
+<div style="color: #000; background-color: #000;">
+<h2 style="padding-top: 10px;">&nbsp;</h2>
+</div>
+
+<hr />
+
+
+<div class="innertext">
+
+<h3>Get the hit single "Tubby Got Rekt" by her!</h3>
+<a href="https://play.google.com/store/music/album/One_shot_gurl_Tubby_Got_Rekt?id=Beyih3od3clnctxpsgkatl2art4" target="_blank"><img src="images/googleplay.svg" height="50" /></a>
+<a href="http://www.cdbaby.com/cd/oneshotgurl" target="_blank"><img src="images/itunes.svg" height="50" /></a><br />
+</div>
+<a href="https://shop.spreadshirt.com/ONEshotGURL/" target="_blank"><img src="images/shirt.jpg" width="330" /></a>
+
+<div class="innertext">
+<h3>About</h3>
+<p>This is an unofficial fan-made app for checking out One Shot Gurl fan art, one piece per person.  Website made by <a href="https://twitter.com/biolithic" target="_blank" style="color: inherit;">@biolithic</a>  Contact him for questions/issues about or to remove content from this app.  Special thanks to One Shot Gurl and Meredith for the logos/art, Youtube for the platform and choice, and all the wonderful Snipers for their art!</p>
+
+<hr />
+
+<h3>App Disclaimer</h3>
+<p>App icons made by <a href="https://twitter.com/MutinyStudios" target="_blank">Mutiny Studios</a> -- hire them for excellent graphics!  All material found in the app is licensed from One Shot Gurl under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC 3.0 BY</a> This app is not funded or created by One Shot Gurl.</p>
+
+<hr />
+
+<h3>The Wall Disclaimer</h3>
+<p>Images are artwork from real fans given to One Shot Gurl 2016-2018.  These were taken from the <a href="https://discord.gg/0tvwy9qQjEu5i1xd" target="_blank">One Shot Nation Discord channel</a>, Twitter, Instagram, and <a href="https://www.youtube.com/playlist?list=PLijj2USOOcf-DOg-i91ov7kw2YBWcUXan" target="_blank">One Shot Gurl's videos.  "The Wall" is a reference to the actual wall One Shot Gurl posted these pictures on, which is coloured Michigan Wolverine Maize just like this virtual wall.</a>
+<hr />
+</div>
+
+<script>
+    $(document).ready(function(){
+var mySwiper = new Swiper ('.swiper-container', {
+      direction: 'horizontal',
+      loop: false,
+       // pagination: '.swiper-pagination',
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    // scrollbar: '.swiper-scrollbar'
+    })
+   });
+</script>
+</body>
+</html>
