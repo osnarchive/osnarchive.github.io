@@ -1,0 +1,62 @@
+<biolithic_analytics_filter_videos>
+<h1>Streambaes of One Shot Gurl
+</h1>
+<div class="ui search">
+  <div class="ui fluid icon input">
+    <input name="search" type="search" onclick={this.save} onkeyup={this.filter} placeholder="Filter videos..."/>
+    <i class="search icon"></i>
+  </div>
+</div>
+<script>
+
+this.videos = window.biolithicBaes;
+this.avgs = [];
+this.viewAvg = "";
+this.likeAvg = "";
+this.dislikeAvg = "";
+this.commentAvg = "";
+this.on('mount', function(){
+  });
+
+this.on('update', function() {
+  this.videos = window.biolithicBaes;
+  }.bind(this));
+
+this.on('updated', function() {
+  }.bind(this));
+
+var self = this;
+  save () {
+        var keyword = this.search.value.toLowerCase();
+        if (keyword) {
+        }
+        else {
+          self.original = self.videos;
+        }
+
+  }
+
+  filter () {
+        var keyword = this.search.value.toLowerCase();
+        if (keyword.length > 0) {
+        var arr = [];
+        var videoslength = self.videos.length;
+        for (z = 0; z < videoslength; z++) {
+          var video = self.videos[z].name.toLowerCase();
+          var video2 = self.videos[z].game.toLowerCase();
+          if ((video.indexOf(keyword) > -1) || (video2.indexOf(keyword) > -1)) {
+            arr.push(self.videos[z]);
+          }
+        }
+        window.biolithicBaes = arr;
+        riot.update();
+        }
+        else {
+          if (self.original) {
+            window.biolithicBaes = self.original;
+            riot.update();
+          }
+        }
+  }
+</script>
+</biolithic_analytics_filter_videos>
