@@ -1,0 +1,66 @@
+<biolithic_analytics_menu>
+
+<div class="ui grid">
+  <div class="sixteen wide column">
+    <div class="ui top attached segment">
+      </div>
+      </div>
+</div>
+<script>
+// var videoService = new VideoService();
+this.videos = [];
+this.avgs = [];
+this.viewAvg = "";
+this.likeAvg = "";
+this.dislikeAvg = "";
+this.commentAvg = "";
+this.on('mount', function(){
+  });
+
+this.on('update', function() {
+  }.bind(this));
+
+/*this.on('updated', function() {
+  }.bind(this));
+
+  var self = this;
+  handler (e) {
+    var clicked_element = e.target; $("li, button.rank").removeClass("h"); $(clicked_element).addClass("h");
+
+    if (window.biolithicAnalyticsMode == "multiple") {  } else { self.videos = []; self.update(); }
+    var videoSeries = window.localStorage.getItem(e.target.dataset.vidnum);
+    videoSeries = JSON.parse(videoSeries);
+
+    if (window.biolithicAnalyticsMode == "multiple") {
+    var videoSerieslength = videoSeries.length;
+    for (x = 0; x < videoSerieslength; x++) { self.videos.push(videoSeries[x]); }
+    } else {  self.videos = videoSeries; }
+
+    window.biolithicAnalyticsVideos = self.videos;
+    window.biolithicAnalyticsAvgs = [];
+    riot.update();
+
+    if (window.biolithicAnalyticsMode == "single") {
+    var totalviewCount = 0; var totallikeCount = 0; var totalcommentCount = 0; var totaldislikeCount = 0;
+    self.viewAvg = ""; self.likeAvg = ""; self.dislikeAvg = ""; self.commentAvg = "";
+    var videoSerieslength = videoSeries.length;
+    for (z = 0; z < videoSerieslength; z++) {
+      totalcommentCount = parseInt(totalcommentCount,10) + parseInt(videoSeries[z].commentCount,10);
+      totaldislikeCount = parseInt(totaldislikeCount,10) + parseInt(videoSeries[z].dislikeCount,10);
+      totallikeCount = parseInt(totallikeCount,10) + parseInt(videoSeries[z].likeCount,10);
+      totalviewCount = parseInt(totalviewCount,10) + parseInt(videoSeries[z].viewCount,10);
+    }
+    var commentAvg = Math.ceil(totalcommentCount / videoSerieslength);
+    var dislikeAvg = Math.floor(totaldislikeCount / videoSerieslength);
+    var likeAvg = Math.ceil(totallikeCount / videoSerieslength);
+    var viewAvg = Math.ceil(totalviewCount / videoSerieslength);
+
+    window.biolithicAnalyticscommentAvg = commentAvg;
+    window.biolithicAnalyticsdislikeAvg = dislikeAvg;
+    window.biolithicAnalyticslikeAvg = likeAvg;
+    window.biolithicAnalyticsviewAvg = viewAvg;
+    riot.update();
+    }
+  }*/
+</script>
+</biolithic_analytics_menu>
